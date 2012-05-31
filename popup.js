@@ -1,5 +1,10 @@
-function show(){
-	chrome.extension.sendRequest({});
+var dailyWord = "Globular";
+var searchin = $('*:contains("'+ dailyWord +'")');
+
+function show(dailyWord){
+	chrome.extension.sendRequest(dailyWord);
 };
 
-show();
+if( searchin.length >= 1){
+	show(dailyWord);
+};

@@ -10,7 +10,7 @@
 	},
 
   "background": {"scripts": ["background.js"]},
-   
+
   "web_accessible_resources":["conky.gif"],
 
   "permissions": [
@@ -21,7 +21,10 @@
   "content_scripts":[
 	{
 		"matches": ["http://*/*"],
-		"js": ["popup.js"]
+		"js": [
+      "jquery-1.7.2.min.js",
+      "popup.js"
+      ]
 	}
   ]
 }
